@@ -1,0 +1,44 @@
+---
+version: "2.1"
+services:
+#Arr_stack
+  overseerr:
+    image: lscr.io/linuxserver/overseerr:latest
+    container_name: overseerr
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /path/to/appdata/config:/app/config
+    ports:
+      - 5055:5055
+    restart: always
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:develop
+    container_name: prowlarr
+    network_mode: lars_default
+    environment:
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - 9696:9696
+    restart: always
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    network_mode: lars_default
+    environment:
+      - PUID=0
+      - PGID=0
+    ports:
+      - 7878:7878
+    restart: always
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=0
+      - GUID=0
+    ports:
+      - 8989:8989
+    restart: always
