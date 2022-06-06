@@ -11,3 +11,7 @@ sudo apt install curl
 sudo apt install nano
 
 sudo apt install git
+
+sudo apt install cifs-utils
+
+sudo apt upgrade
