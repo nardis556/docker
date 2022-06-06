@@ -16,7 +16,6 @@ services:
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:develop
     container_name: prowlarr
-    network_mode: lars_default
     environment:
       - PUID=1000
       - PGID=1000
@@ -26,7 +25,6 @@ services:
   radarr:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
-    network_mode: lars_default
     environment:
       - PUID=0
       - PGID=0
