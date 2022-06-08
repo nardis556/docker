@@ -8,8 +8,6 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-    volumes:
-      - /path/to/appdata/config:/app/config
     ports:
       - 5055:5055
     restart: always
