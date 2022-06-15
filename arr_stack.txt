@@ -1,3 +1,4 @@
+#compose
 ---
 version: "2.1"
 services:
