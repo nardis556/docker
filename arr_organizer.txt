@@ -1,0 +1,28 @@
+#compose
+---
+version: "2.1"
+services:
+#organizerr
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=0
+      - PGID=0
+    volumes:
+      - /mnt/sdb1/TV:/Movies
+    ports:
+      - 7879:7879
+    restart: always
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=0
+      - GUID=0
+    volumes:
+      - /mnt/sdb1/TV:/tv
+      - /mnt/sdb1/cartoons:/cartoons
+    ports:
+      - 8980:8980
+    restart: always
