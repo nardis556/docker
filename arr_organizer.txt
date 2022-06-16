@@ -12,7 +12,7 @@ services:
     volumes:
       - /mnt/sdb1/TV:/Movies
     ports:
-      - 7879:7879
+      - 7878:7878
     restart: always
   sonarr:
     image: lscr.io/linuxserver/sonarr:latest
@@ -24,5 +24,5 @@ services:
       - /mnt/sdb1/TV:/tv
       - /mnt/sdb1/cartoons:/cartoons
     ports:
-      - 8980:8980
+      - 8989:8989
     restart: always
