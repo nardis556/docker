@@ -6,10 +6,10 @@ sudo apt install -y build-essential
 
 sudo apt install software-properties-common
 
-sudo apt install curl
+sudo apt install curl -y
 
-sudo apt install nano
+sudo apt install nano -y
 
-sudo apt install cifs-utils
+sudo apt install cifs-utils -y
 
-sudo apt upgrade
+sudo apt upgrade -y
