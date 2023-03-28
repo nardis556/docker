@@ -1,7 +1,8 @@
 #!bin/bash
 
-sudo apt install curl -y
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
 
-curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh && sudo usermod -aG docker ${USER}
-
-exec bash
+echo "run:      sudo usermod -aG docker $USER"
+echo "          Relog after running the command with logout, exit or reboot if that doesn't work"
+echo "          Verify installation with: docker run hello-world"
